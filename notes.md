@@ -59,3 +59,9 @@ To remove the VE and all the assciated packages:
 conda remove --name my_project --all
 ```
 
+## Jupyter Notebook
+Tutorial (Corey Schafer): https://www.youtube.com/watch?v=HW29067qVWk&ab_channel=CoreySchafer
+
+
+
+
