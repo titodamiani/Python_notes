@@ -23,14 +23,13 @@ alias = create CLI shortcut
 
 
 ## Virtual Environment (VE)
-### Create VE with the built-in venv module
+### Create VEs with the built-in venv module
 Tutorial (Corey Schafer): https://www.youtube.com/watch?v=Kg1Yvry_Ydk&ab_channel=CoreySchafer
-
-Create new VE (called "new_ve") with the built-in venv module:
+Create a new VE (e.g. 'new_ve'):
 ```
 python -m venv new_ve
 ```
-The new VE will come as a folder (called as the name given to the VE, i.e., new_ve in this case) that contains the bin, include and lib subfolders. The bin subfolder contains the file to be run to activate the environment.
+The new VE will come as a folder (called as the name given to the VE, i.e., 'new_ve' in this case) that contains the 'bin', 'include' and 'lib' subfolders. The 'bin' subfolder contains the file to be run to activate the environment.
 
 Activate the VE:
 ```
@@ -41,21 +40,15 @@ Deactivate the VE:
 ```
 deactivate
 ```
-Tip: create the VE inside of the project's folder (e.g. my_project) and call it venv. This is a very common convention. 
+Tip: it is convention to first create the project's folder (e.g. my_project) and then create the VE, called venv, inside it. In this manner, your own files don't get mixed with the VE files. For example:
 ```
 mkdir my_project
 python -m venv my_project/venv
 ```
 
-### Create VE with Anaconda
+### Create VEs with Anaconda
+Differently form the venv module, Anaconda installs all the VEs into the 'envs' directory in the conda directory by default. To see a list of all of the VEs created with Anaconda, run `conda env list`. If you decide to keep the defalt settings, you can directly create the new project directory (e.g. my_project):
 ```
-conda create -n yourenvname python=3.10.0 anaconda
+conda create -n my_project python=3.10.0
 ```
-Activate the VE:
-```
-source activate yourenvname
-```
-Deactivate the VE:
-```
-source deactivate
-```
+To activate the VE, run `conda activate my_project` (you can do it from any directory). To deactivate the VE, run `conda deactivate`.
