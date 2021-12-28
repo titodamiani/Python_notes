@@ -14,6 +14,7 @@ cd .. = go to higher directory
 pwd = print working directory 
 ls = list objects and info
 mkdir = create new directory
+touch = create an empty file
 which or type = see object’s path 
 echo $PATH = print PATH environment variable
 source = Read and execute commands from given FILENAME and return. Pathnames in $PATH are used to find the directory containing FILENAME
@@ -22,7 +23,8 @@ alias = create CLI shortcut
 
 
 ## Virtual Environment (VE)
-venv Module Tutorial (Corey Schafer): https://www.youtube.com/watch?v=Kg1Yvry_Ydk&ab_channel=CoreySchafer
+### Create VE with the built-in venv module
+Tutorial (Corey Schafer): https://www.youtube.com/watch?v=Kg1Yvry_Ydk&ab_channel=CoreySchafer
 
 Create new VE (called "new_ve") with the built-in venv module:
 ```
@@ -43,4 +45,17 @@ Tip: create the VE inside of the project's folder (e.g. my_project) and call it 
 ```
 mkdir my_project
 python -m venv my_project/venv
+```
+
+### Create VE with Anaconda
+```
+conda create -n yourenvname python=3.10.0 anaconda
+```
+Activate the VE:
+```
+source activate yourenvname
+```
+Deactivate the VE:
+```
+source deactivate
 ```
