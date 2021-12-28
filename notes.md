@@ -17,14 +17,13 @@ mkdir = create new directory
 touch = create an empty file
 which or type = see object’s path 
 echo $PATH = print PATH environment variable
-source = Read and execute commands from given FILENAME and return. Pathnames in $PATH are used to find the directory containing FILENAME
-
+source = read and execute commands from given 'file_name' and return. Pathnames in $PATH are used to find the directory containing 'file_name'
 alias = create CLI shortcut
 
 
 ## Virtual Environment (VE)
 ### Create VEs with the built-in venv module
-Tutorial (Corey Schafer): https://www.youtube.com/watch?v=Kg1Yvry_Ydk&ab_channel=CoreySchafer
+Tutorial (Corey Schafer): https://www.youtube.com/watch?v=Kg1Yvry_Ydk&ab_channel=CoreySchafer<br>
 Create a new VE (e.g. 'new_ve'):
 ```
 python -m venv new_ve
@@ -47,8 +46,15 @@ python -m venv my_project/venv
 ```
 
 ### Create VEs with Anaconda
+Guide: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html<br>
 Differently form the venv module, Anaconda installs all the VEs into the 'envs' directory in the conda directory by default. To see a list of all of the VEs created with Anaconda, run `conda env list`. If you decide to keep the defalt settings, you can directly create the new project directory (e.g. my_project):
 ```
 conda create -n my_project python=3.10.0
 ```
 To activate the VE, run `conda activate my_project` (you can do it from any directory). To deactivate the VE, run `conda deactivate`.
+
+To remove the VE:
+```
+conda remove --name my_project --all #where 'all' refers to 'all installed packages'
+```
+
